@@ -94,6 +94,9 @@ export default {
         //   }
         // } else if (process.env.VUE_APP_DEFAULT_AUTH === "authapi") {
 
+//Change: set to base url to allow proxy url to run
+        axios.defaults.baseURL = '/';
+        
         axios
           .post(
             "https://local-api.sppay.dev/v1/sanctum/token",
@@ -102,11 +105,12 @@ export default {
               password: "T3st2021$",
               device_name: "Test Device",
             },
-            {
-              headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-              },
-            }
+             //Change: this is not needed
+            // {
+            //   headers: {
+            //     "Content-Type": "application/x-www-form-urlencoded",
+            //   },
+            // }
           )
           .then((res) => {
             
