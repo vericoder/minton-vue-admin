@@ -1,0 +1,224 @@
+// 
+// bootstrap-rtl.scss
+//
+
+
+
+
+// Card
+
+.card-widgets {
+    float: left;
+}
+
+
+// Dropdowns
+
+.dropdown-menu {
+    text-align: right;
+    right: auto !important;
+    left: 0 !important;
+}
+
+.dropdown-menu[style] {
+    right: auto !important;
+    left: 0 !important
+}
+
+
+.dropdown-menu-end {
+    right: auto !important;
+    left: 0 !important;
+}
+
+.megamenu-list {
+    li {
+
+        &:before {
+            left: auto;
+            right: 0;
+        }
+    }
+}
+
+// List
+
+ul {
+    padding-right: 0;
+}
+
+
+// Buttons
+
+.btn-label {
+    margin: -.55rem -.9rem -.55rem .9rem;
+}
+
+.btn-label-right {
+    margin: (-$btn-padding-y) ($btn-padding-x) (-$btn-padding-y) (-$btn-padding-x);
+}
+
+.btn-group,
+.btn-group-vertical {
+    direction: ltr;
+}
+
+
+// Modal
+
+.modal-header {
+    .close {
+        left: 0;
+        right: auto;
+    }
+}
+
+.modal-footer {
+    > :not(:first-child) {
+        margin-right: .25rem;
+        margin-left: 0;
+    }
+
+    > :not(:last-child) {
+        margin-left: .25rem;
+        margin-right: 0;
+    }
+}
+
+
+// Alerts
+
+.alert-dismissible {
+    padding-right: $alert-padding-x;
+
+    .close {
+        left: 0 !important;
+        right: auto !important;
+    }
+}
+
+
+
+// Breadcrumb item arrow
+
+.breadcrumb-item {
+    +.breadcrumb-item {
+        display: inline-block;
+
+        &::before {
+            float: right;
+            padding-left: $breadcrumb-item-padding-x;
+            content: "\F0141";
+        }
+    }
+}
+
+
+   
+
+// Custom Checkbox-Radio 
+
+.form-check {
+    padding-right: 1.5em !important;
+    .form-check-input{
+        float: right;
+        margin-right: -1.5em;
+    }
+    &.form-switch{
+        .form-check-label{
+            margin-right: 1.5rem;
+        }
+    }
+}
+
+.form-floating > label{
+    right: 0;
+    left: auto;
+}
+.form-select{
+    background-position: left 0.9rem center;
+    padding: 0.45rem 0.9rem 0.45rem 1.9rem;
+}
+.custom-radio {
+    .custom-control-label {
+      margin-right: 10px !important;
+    }
+}
+
+
+.custom-file-label {
+    &::after {
+        right: auto;
+        left: 0;
+        border-right: inherit;
+    }
+}
+
+.custom-control-inline {
+    margin-left: 1rem;
+    margin-right: 0;
+}
+
+.custom-control-input{
+ margin-left: 12px;
+}
+
+
+// 
+// accordions.scss
+//
+
+.custom-accordion {
+    .accordion-arrow {
+        left: 0;
+        right: auto;
+    }
+}
+
+
+
+// Input Group
+
+.input-group-prepend {
+    margin-left: -1px;
+    margin-right: 0;
+}
+
+.input-group-append {
+    margin-right: -1px;
+    margin-left: 0;
+}
+
+.input-group>.input-group-prepend>.btn,
+.input-group>.input-group-prepend>.input-group-text,
+.input-group>.input-group-append:not(:last-child)>.btn,
+.input-group>.input-group-append:not(:last-child)>.input-group-text,
+.input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle),
+.input-group>.input-group-append:last-child>.input-group-text:not(:last-child),
+.input-group>.custom-select:not(:last-child),
+.input-group>.form-control:not(:last-child) {
+    border-top-right-radius: $input-border-radius;
+    border-bottom-right-radius: $input-border-radius;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.input-group>.input-group-append>.btn,
+.input-group>.input-group-append>.input-group-text,
+.input-group>.input-group-prepend:not(:first-child)>.btn,
+.input-group>.input-group-prepend:not(:first-child)>.input-group-text,
+.input-group>.input-group-prepend:first-child>.btn:not(:first-child),
+.input-group>.input-group-prepend:first-child>.input-group-text:not(:first-child),
+.input-group>.custom-select:not(:first-child),
+.input-group>.form-control:not(:first-child) {
+    border-top-left-radius: $input-border-radius;
+    border-bottom-left-radius: $input-border-radius;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+// List group
+.list-inline-item:not(:last-child) {
+    margin-left: 6px;
+    margin-right: 0;
+}

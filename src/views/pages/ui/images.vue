@@ -1,0 +1,327 @@
+<script>
+import Layout from "../../layouts/main";
+import PageHeader from "@/components/Page-header";
+import appConfig from "../../../../app.config";
+
+/**
+ * Images component
+ */
+export default {
+  page: {
+    title: "Images",
+    meta: [{ name: "description", content: appConfig.description }],
+  },
+  components: {
+    Layout,
+    PageHeader,
+  },
+  data() {
+    return {
+      title: "Images",
+      items: [
+        {
+          text: "Minton",
+          href: "/",
+        },
+        {
+          text: "UI",
+          href: "/",
+        },
+        {
+          text: "Images",
+          active: true,
+        },
+      ],
+    };
+  },
+};
+</script>
+
+<template>
+  <Layout>
+    <PageHeader :title="title" :items="items" />
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-xl-6">
+                <h4 class="header-title">Images shapes</h4>
+                <p class="sub-header">
+                  Add classes to an <code>&lt;img&gt;</code> element to easily
+                  style images in any project.
+                </p>
+
+                <div class="row">
+                  <div class="col-sm-4">
+                    <b-img
+                      :src="require('@/assets/images/small/img-1.jpg')"
+                      width="200"
+                      rounded
+                      alt="image"
+                    ></b-img>
+                    <p class="mb-0">
+                      <code>rounded</code>
+                    </p>
+                  </div>
+
+                  <div class="col-sm-4 text-center">
+                    <b-img
+                      :src="require('@/assets/images/users/avatar-6.jpg')"
+                      width="120"
+                      rounded="circle"
+                      alt="image"
+                    ></b-img>
+                    <p class="mb-0">
+                      <code>rounded="circle"</code>
+                    </p>
+                  </div>
+
+                  <div class="col-sm-4">
+                    <b-img
+                      thumbnail
+                      :src="require('@/assets/images/small/img-3.jpg')"
+                      width="200"
+                      alt="image"
+                    ></b-img>
+                    <p class="mb-0">
+                      <code>thumbnail</code>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- end col-->
+
+              <div class="col-xl-6 mt-3 mt-xl-0">
+                <h4 class="header-title">Image sizes</h4>
+                <p class="sub-header">
+                  Add classes to an <code>&lt;img&gt;</code> element to easily
+                  style images in any project.
+                </p>
+
+                <div class="row">
+                  <div class="col-sm-3">
+                    <img
+                      src="@/assets/images/users/avatar-2.jpg"
+                      alt="image"
+                      class="img-fluid avatar-xs rounded"
+                    />
+                    <p class="mb-0">
+                      <code>.avatar-xs</code>
+                    </p>
+                    <img
+                      src="@/assets/images/users/avatar-2.jpg"
+                      alt="image"
+                      class="img-fluid avatar-sm rounded mt-2"
+                    />
+                    <p class="mb-0">
+                      <code>.avatar-sm</code>
+                    </p>
+                  </div>
+
+                  <div class="col-sm-3">
+                    <img
+                      src="@/assets/images/users/avatar-2.jpg"
+                      alt="image"
+                      class="img-fluid avatar-md rounded"
+                    />
+                    <p class="mb-0">
+                      <code>.avatar-md</code>
+                    </p>
+                  </div>
+
+                  <div class="col-sm-3">
+                    <img
+                      src="@/assets/images/users/avatar-2.jpg"
+                      alt="image"
+                      class="img-fluid avatar-lg rounded"
+                    />
+                    <p class="mb-0">
+                      <code>.avatar-lg</code>
+                    </p>
+                  </div>
+
+                  <div class="col-sm-3">
+                    <img
+                      src="@/assets/images/users/avatar-2.jpg"
+                      alt="image"
+                      class="img-fluid avatar-xl rounded"
+                    />
+                    <p class="mb-0">
+                      <code>.avatar-xl</code>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+          </div>
+        </div>
+        <!-- end card -->
+      </div>
+      <!-- end col -->
+    </div>
+    <!-- end row -->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="header-title">Border-radius</h4>
+            <p class="sub-header mb-0">
+              Add classes to an element to easily round its corners.
+            </p>
+
+            <div class="row">
+              <div class="col-md col-sm-6">
+                <div class="mt-3">
+                  <img
+                    src="@/assets/images/users/avatar-3.jpg"
+                    alt="image"
+                    class="img-fluid avatar-md rounded"
+                  />
+                  <p class="mb-0">
+                    <code>.rounded</code>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md col-sm-6">
+                <div class="mt-3">
+                  <img
+                    src="@/assets/images/users/avatar-3.jpg"
+                    alt="image"
+                    class="img-fluid avatar-md rounded-top"
+                  />
+                  <p class="mb-0">
+                    <code>.rounded-top</code>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md col-sm-6">
+                <div class="mt-3">
+                  <img
+                    src="@/assets/images/users/avatar-3.jpg"
+                    alt="image"
+                    class="img-fluid avatar-md rounded-end"
+                  />
+                  <p class="mb-0">
+                    <code>.rounded-end</code>
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md col-sm-6">
+                <div class="mt-3">
+                  <img
+                    src="@/assets/images/users/avatar-3.jpg"
+                    alt="image"
+                    class="img-fluid avatar-md rounded-bottom"
+                  />
+                  <p class="mb-0">
+                    <code>.rounded-bottom</code>
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md col-sm-6">
+                <div class="mt-3">
+                  <img
+                    src="@/assets/images/users/avatar-3.jpg"
+                    alt="image"
+                    class="img-fluid avatar-md rounded-start"
+                  />
+                  <p class="mb-0">
+                    <code>.rounded-start</code>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md col-sm-6">
+                <div class="mt-3">
+                  <img
+                    src="@/assets/images/users/avatar-3.jpg"
+                    alt="image"
+                    class="img-fluid avatar-md rounded-circle"
+                  />
+                  <p class="mb-0">
+                    <code>.rounded-circle</code>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- end row-->
+          </div>
+        </div>
+      </div>
+      <!-- end col -->
+    </div>
+    <!-- end row -->
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="header-title">Sizes</h4>
+            <p class="sub-header mb-0">
+              Use the scaling classes for larger or smaller rounded corners
+            </p>
+
+            <div class="row">
+              <div class="col-md col-sm-6">
+                <div class="mt-3">
+                  <img
+                    src="@/assets/images/users/avatar-2.jpg"
+                    alt="image"
+                    class="img-fluid avatar-md rounded-0"
+                  />
+                  <p class="mb-0">
+                    <code>.rounded-0</code>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md col-sm-6">
+                <div class="mt-3">
+                  <img
+                    src="@/assets/images/users/avatar-2.jpg"
+                    alt="image"
+                    class="img-fluid avatar-md rounded-1"
+                  />
+                  <p class="mb-0">
+                    <code>.rounded-1</code>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md col-sm-6">
+                <div class="mt-3">
+                  <img
+                    src="@/assets/images/users/avatar-2.jpg"
+                    alt="image"
+                    class="img-fluid avatar-md rounded-2"
+                  />
+                  <p class="mb-0">
+                    <code>.rounded-2</code>
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md col-sm-6">
+                <div class="mt-3">
+                  <img
+                    src="@/assets/images/users/avatar-2.jpg"
+                    alt="image"
+                    class="img-fluid avatar-md rounded-3"
+                  />
+                  <p class="mb-0">
+                    <code>.rounded-3</code>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- end row-->
+          </div>
+        </div>
+      </div>
+      <!-- end col -->
+    </div>
+    <!-- end row -->
+  </Layout>
+</template>

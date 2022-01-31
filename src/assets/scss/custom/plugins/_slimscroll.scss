@@ -1,0 +1,18 @@
+@import "~simplebar-vue/dist/simplebar.min.css";
+
+.simplebar-scrollbar:before {
+    position: absolute;
+    content: '';
+    background: #a2adb7 !important; 
+    border-radius: 7px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+    width: 5px !important;
+}
+
+
+.custom-scroll {
+    height: 100%;
+}
