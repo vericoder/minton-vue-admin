@@ -99,7 +99,7 @@ export default {
         
         axios
           .post(
-            "https://local-api.sppay.dev/v1/sanctum/token",
+            "/v1/sanctum/token",
             {
               email: "test@sppaysolutions.com",
               password: "T3st2021$",
@@ -113,7 +113,13 @@ export default {
             // }
           )
           .then((res) => {
-            
+            localStorage.setItem('user', res);
+            console.log(res.data, '117');
+               this.$router.push(
+                this.$route.query.redirectFrom || {
+                  path: "/",
+                }
+              );
             return res;
           })
           .catch((error) => {

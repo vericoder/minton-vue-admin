@@ -103,6 +103,14 @@ export default {
       let element = document.getElementById("topnav-menu-content");
       element.classList.toggle("show");
     },
+    logoutuser() {
+      localStorage.removeItem("user");
+       this.$router.push(
+                this.$route.query.redirectFrom || {
+                  path: "/login",
+                }
+              );
+    }
   },
 };
 </script>
@@ -423,7 +431,7 @@ export default {
           </b-dropdown-item>
 
           <b-dropdown-divider></b-dropdown-divider>
-          <a class="dropdown-item" href="/logout">
+          <a class="dropdown-item" @click="logoutuser">
             <i class="ri-logout-box-line"></i>
             <span>{{ $t("navbar.dropdown.name.list.logout") }}</span>
           </a>

@@ -31,9 +31,9 @@ import VueSlideBar from 'vue-slide-bar'
  
 Vue.component('VueSlideBar', VueSlideBar)
 
-import { initFirebaseBackend } from './authUtils';
+// import { initFirebaseBackend } from './authUtils';
 
-import { configureFakeBackend } from './helpers/fake-backend';
+// import { configureFakeBackend } from './helpers/fake-backend';
 
 const firebaseConfig = {
   apiKey: process.env.VUE_APP_APIKEY,
@@ -46,11 +46,11 @@ const firebaseConfig = {
   measurementId: process.env.VUE_APP_MEASUREMENTID
 };
 
-if (process.env.VUE_APP_DEFAULT_AUTH === "firebase") {
-  initFirebaseBackend(firebaseConfig);
-} else if (process.env.VUE_APP_DEFAULT_AUTH === "fakebackend") {
-  configureFakeBackend();
-}
+// if (process.env.VUE_APP_DEFAULT_AUTH === "firebase") {
+//   initFirebaseBackend(firebaseConfig);
+// } else if (process.env.VUE_APP_DEFAULT_AUTH === "fakebackend") {
+//   configureFakeBackend();
+// }
 
 Vue.component('apexchart', VueApexCharts)
 Vue.use(BootstrapVue)

@@ -74,9 +74,9 @@ export default [
     {
         path: '/',
         name: 'home',
-        // meta: {
-        //     authRequired: true,
-        // },
+        meta: {
+            authRequired: true,
+        },
         component: () => import('../views/pages/dashboard/sales/index')
     },
     {

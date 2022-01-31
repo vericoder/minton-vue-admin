@@ -76,11 +76,15 @@ router.beforeEach((routeTo, routeFrom, next) => {
         const publicPages = ['/login', '/register', '/forgot-password'];
         const authpage = !publicPages.includes(routeTo.path);
         const loggeduser = localStorage.getItem('user');
-            console.log(loggeduser);
-            if ( !loggeduser && routeTo.path != "/login") {
+        console.log('start ',publicPages, authpage, loggeduser)  
+        
+            if (!loggeduser && !publicPages.includes(routeTo.path) ) {
                 console.log('not logged in', routeTo);
                 // next({ name: 'login' })
                 return next('/login');
+            } else if(loggeduser && publicPages.includes(routeTo.path)) {
+                console.log('is logged in', routeFrom);
+                return next('/');
             }
             next();
     }   
@@ -93,6 +97,7 @@ router.beforeResolve(async (routeTo, routeFrom, next) => {
     // but the resolved route does not. We put it in `meta` to
     // indicate that it's a hook we created, rather than part of
     // Vue Router (yet?).
+    console.log("routeFrom", routeFrom, routeTo)
     try {
         // For each matched route...
         for (const route of routeTo.matched) {
